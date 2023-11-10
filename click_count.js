@@ -1,6 +1,6 @@
-let clicks = 0;
+var clicks = 0;
 
-function onClick() {
+function click_count() {
   clicks += 1;
   document.getElementById("clicks").innerHTML = clicks;
 };
