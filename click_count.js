@@ -6,6 +6,7 @@ count.innerText = `Clicks: ${clicks}`; // think python f strings here
 
 
 button.addEventListener('click', () => {
+  console.log(clicks);
   clicks++;
   count.innerText = `Clicks: ${clicks}`;
 })
