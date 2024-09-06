@@ -37,6 +37,7 @@
 
     <!-- this is what's being displayed in the browser -->
     <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <h1>A very cool title</h1>
         <p> I wonder what a paragraph does </p>
 
@@ -57,6 +58,7 @@
           let count = document.getElementById('count');
           
           count.innerText = `Clicks: ${clicks}`; // think python f strings here
+          // note: we need those special backtick thingies
           
           
           button.addEventListener('click', () => {
