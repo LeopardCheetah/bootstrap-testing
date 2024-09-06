@@ -1,6 +1,4 @@
-# website-making
-maybe this will be used for a scouting website local app like pwnage robotics
+# bootstrap-testing   
 
----
-
-(a.k.a Python scripter tries front-end)
+we testing the bootstrap package   
+https://getbootstrap.com/
