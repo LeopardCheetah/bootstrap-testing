@@ -5,6 +5,7 @@ let count = document.getElementById('count');
 
 // think python f strings here
 // need backticks here
+
 count.innerText = `Clicks: ${clicks}`; 
 
 
@@ -13,3 +14,5 @@ button.addEventListener('click', () => {
   clicks++;
   count.innerText = `Clicks: ${clicks}`;
 })
+
+
