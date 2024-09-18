@@ -4,33 +4,71 @@ async function getRequest(request) {
     if (!(typeof request === 'string' || request instanceof String)){
         console.error("API Request link is not a string!")
     }
-
-    let tba_key = "";
-    // read secret key
-    const fs = require('fs'); // file stuff
-    fs.readFile('secret.txt', (err, inputD) => {
-        if (err) throw err; 
-            tba_key = inputD.toString();
-            console.log(tba_key);
-    })
-
-    // this should work?
+   
 
 
-    // how tf do i test this
+
+
+    
+
+    let cool_tba_key = '';
+    const reader = new FileReader();
+
+
+    // make file
+    const my_cool_file = new File(["some cool text"], "test.txt");
+
+    cool_tba_key = reader.readAsText(my_cool_file);
+    console.log("Key:");
+    console.log(cool_tba_key);
+    console.log("11111");
+
+
+
+
+
+
+
+
+
 
 
     // this part still needs to be done
 
     try {
-      const response = await fetch(url + request);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-  
-      const json = await response.json();
-      console.log(json);
+        const response = await fetch(url + request);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+    
+        const json = response.json();
+        console.log(json);
     } catch (error) {
-      console.error(error.message);
+        console.error(error.message);
     }
 }
+
+
+
+getRequest('/status')
+console.log('1');
+
+let status = false;
+let tba_button = document.getElementById('TBA_button');
+let status_text = document.getElementById('Status');
+
+
+status_text.innerText = `Current status: ????`; 
+
+tba_button.addEventListener('click', () => {
+    console.log("TBA button was clicked");
+
+    
+    let bool = getRequest("/status")
+    throw new Error("Var bool is not a bool! (line 79)");
+    if (bool) { // note this aint a bool i gotta convert the json i get to something good
+    console.log("You haven't finished this part dum dum (gotta convert the output to a bool)");
+    console.log(bool);
+    }
+    status_text.innerText; // what is this
+})

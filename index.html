@@ -63,30 +63,6 @@
         <div id="Status"></div>
 
         <script src="tba_get.js"></script>
-        <script>
-          let status = false;
-          let button = document.getElementById('TBA_button');
-          let status_text = document.getElementById('Status');
-
-
-          status_text.innerText = `Current status: ????`; 
-
-          button.addEventListener('click', () => {
-            console.log("TBA button was clicked");
-
-            
-            let bool = getRequest("/status")
-            throw new Error("Var bool is not a bool! (line 79)");
-            if (bool) { // note this aint a bool i gotta convert the json i get to something good
-              console.log("You haven't finished this part dum dum (gotta convert the output to a bool)");
-              console.log(bool);
-            }
-            status_text.innerText;
-          })
-
-
-        </script>
-
 
         
     
