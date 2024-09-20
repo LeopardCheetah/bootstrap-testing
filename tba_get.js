@@ -9,9 +9,9 @@ async function getRequest(request) {
 
 
 
-    
 
-    let cool_tba_key = '';
+    /*
+    let cool_tba_key = "";
     const reader = new FileReader();
 
 
@@ -22,11 +22,7 @@ async function getRequest(request) {
     console.log("Key:");
     console.log(cool_tba_key);
     console.log("11111");
-
-
-
-
-
+    */ // to fix
 
 
 
@@ -53,6 +49,10 @@ async function getRequest(request) {
 getRequest('/status')
 console.log('1');
 
+
+
+
+/*
 let status = false;
 let tba_button = document.getElementById('TBA_button');
 let status_text = document.getElementById('Status');
@@ -72,3 +72,4 @@ tba_button.addEventListener('click', () => {
     }
     status_text.innerText; // what is this
 })
+*/
