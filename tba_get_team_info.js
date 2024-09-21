@@ -13,17 +13,20 @@ async function testingAPI(){
     var url_front = "https://www.thebluealliance.com/api/v3/team/frc";
     var url_back = "/awards";
 
-    var team_number = document.getElementById('team_number_thing_id').value;
-    console.log("Team number entered: "+team_number);
 
+    
+    var button = document.getElementById('submit_button');
 
-    document.getElementById('TBA_team_award').innerHTML = await fetchTwo(url_front + Number(team_number) + url_back, key); 
+    button.addEventListener('click', async function() {
+        var team_number = document.getElementById('team_number_thing_id').value;
+        console.log("Team number entered: "+team_number);
 
+        var latest_award = await fetchTwo(url_front + Number(team_number) + url_back, key); 
+        document.getElementById('TBA_team_award').innerHTML = "Team "+team_number+"'s earliest award name: "+latest_award;
+    });
 
     
 }
-
-
 
 
 async function fetchTwo(url, key){
@@ -42,8 +45,10 @@ async function fetchTwo(url, key){
 
 
     
+
     console.log(data);
-    return await data[0];
+    console.log(data[0]);
+    return await data[0].name;
 }
 
 
