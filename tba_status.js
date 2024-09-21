@@ -12,7 +12,7 @@ async function testingAPI(){
 
 
     var url = "https://www.thebluealliance.com/api/v3/status";
-    fetchTwo(url, key); 
+    document.getElementById('TBA_status_location').innerHTML = await fetchTwo(url, key); 
 }
 
 async function fetchTwo(url, key){
@@ -28,10 +28,11 @@ async function fetchTwo(url, key){
 
     const response = await fetch(request);
     const data = await response.json();
-    console.log(response.status, data.current_season);
+    return await response.status, data.current_season;
 }
 
 
+/*
 // go get the secret from the file!
 async function getFile(){
     const get_file = await fetch("secret.txt")
@@ -42,9 +43,7 @@ async function getFile(){
     .catch((e) => console.error(e));
     console.log(get_file);
 }
+*/
 
-getFile();
-
-
-
-
+testingAPI();
+// document.getElementById('TBA_status_location').innerHTML = testingAPI();
